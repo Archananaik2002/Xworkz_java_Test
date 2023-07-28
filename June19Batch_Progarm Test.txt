@@ -1,0 +1,219 @@
+1) Method overloading: Method having same name but changes in number of parameter.
+
+Example:
+ class School
+{
+
+static void student(String name, int age)
+{
+System.out.println("Name of the Student is:"+name);
+System.out.println("Age of the Student is:"+age);
+}
+
+static void student(String name, int age, int marks)
+{
+System.out.println("Name of the Student is:"+name);
+System.out.println("Age of the Student is:"+age);
+System.out.println("Marks of the Student is:"+marks);
+
+}
+}
+
+class SchoolRunner
+{
+public static void main(String[] args)
+{
+System.out.println("Invoking main in SchoolRuner......");
+School.student("Archana",21);
+School.student("Archana",21,78);
+
+
+}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+2) Variables is container which is used to store the information..There are 4 types of variable, they are local variable, static variable, instance variable and parameterized variable.
+
+1. Local vaiables are declared within the body of the method.
+
+2. Instance Variables are declared inside the class but outside the method.
+
+3. Static variables are same like instance varibale declared inside the class but outside the method but static variables are declared using static keyword..Static variable create single copy of the object and share it to all instance of class.
+
+4. Parameterized varibales are local variables declared within the paranthesis of the methods.
+
+For Example:
+
+class Teacher
+{
+ static String name; //Static variables
+ int age;            // instance variables
+ String qualification;
+
+ static void teach(String subjectName) //parameterized variable
+{
+     int hours; //loacl variable
+
+}
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+4) //Progrom for constructor overloading
+
+class Country
+{
+ String countryName;
+ int countryCode;
+
+
+Country(String countryName)
+{
+
+    System.out.println("Invoking String parameter constructor of Country.....");
+    System.out.println("Coutry Name is:"+this.countryName);
+
+}
+
+Country(String countryName, int countryCode)
+{
+   
+    System.out.println("Invoking String, int parameter constructor of Country.....");
+     this.countryName=countryName;
+     this.countryCode=coutryCode;
+
+}
+
+}
+
+class CountryRunner
+{
+public static void main(String[] args)
+{
+  System.out.println("Running main in CountryRunner...");
+
+  Country country=new Country("India");
+  Country country1=new Country("India",91);
+
+}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+6) //Program for static variables and static method
+
+class Laptop
+{
+
+ static brand="HP"
+
+
+ static void playMusic(int sizeInMb)
+{
+ 
+  System.out.println("Running start in Laptop.....");
+  System.out.println("Size of the song is:"+sizeInMb) ; 
+
+}
+}
+
+class LaptopExecutor
+{
+ public sttaic void main(Strig[] args)
+{
+   System.out.println("Running main in LaptopExecutor.....");
+   System.out.println("Laptop Brand :"+Laptop.brand");
+   Laptop.playMusic(2);
+}
+
+}
+
+
+
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7) // program for constructor chaining using this keyword
+
+   class Fruit
+{
+
+String name;
+int price;
+ 
+ Fruit()
+{
+ System.out.println("Invoking default constructor in Fruit...");
+}
+
+Fruit(String name)
+{
+ this();
+ this.name=name;
+ System.out.println("Invoking String  constructor in Fruit...");
+}
+Fruit(String name,int price)
+{
+ this(name);
+ System.out.println("Invoking String  constructor in Fruit...");
+ this.price=price;
+}
+
+  
+
+}
+
+
+class FruitRunner
+{
+ 
+ public static void main(String[] args)
+
+{
+
+System.out.println("Running main in FruitRunner");
+Fruit fruit=new Fruit();
+Fruit fruit1=new Fruit("Apple");
+Fruit fruit2=new Fruit("Orange",80);
+
+
+}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+5)  class Student
+{
+
+
+void trainedBy(String trainerName)
+{
+ System.out.println("Trainer Name:"+trainerName);
+}
+
+void trainedBy(String trainerName, String subject)
+
+{
+ System.out.println("Trainer Name:"+trainerName);
+System.out.println("Subject Name:"+subject);
+}
+ 
+}
+
+class StudentRunner
+{
+  
+public static void main(String[] args)
+{
+  System.out.println("Running main in StudentRunner......");
+  Student student=new Student();
+  student.trainedBy("Archana");
+ student.trainedBy("Archana","Java");
+
+}
+
+
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
