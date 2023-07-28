@@ -59,6 +59,14 @@ class Teacher
 }
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
+3)Difference between stack and heap memory..
+Stack memory is used to store the order of method execution and local variables.
+Heap memory stores the objects and it uses dynamic memory allocation and deallocation. 
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 4) //Progrom for constructor overloading
 
 class Country
@@ -104,14 +112,17 @@ public static void main(String[] args)
 class Laptop
 {
 
- static brand="HP"
+ static String brand;
 
-
- static void playMusic(int sizeInMb)
+static
+{
+ brand="HP";
+}
+ static void staticLaptop()
 {
  
-  System.out.println("Running start in Laptop.....");
-  System.out.println("Size of the song is:"+sizeInMb) ; 
+  System.out.println("Running staticLaptop in Laptop.....");
+  System.out.println("Size of the song is:"+brand) ; 
 
 }
 }
@@ -121,8 +132,7 @@ class LaptopExecutor
  public sttaic void main(Strig[] args)
 {
    System.out.println("Running main in LaptopExecutor.....");
-   System.out.println("Laptop Brand :"+Laptop.brand");
-   Laptop.playMusic(2);
+   Laptop.staticLaptop();
 }
 
 }
